@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primary Division - FutureLearn AI</title>
+    <style>
+      :root {
+        --bg-dark: #020617;
+        --panel-dark: #0f172a;
+        --border-color: #1e293b;
+        --primary: #3b82f6;
+        --accent: #10b981;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", system-ui, sans-serif;
+      }
+      body {
+        background: var(--bg-dark);
+        color: var(--text-main);
+      }
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 8%;
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+        z-index: 1000;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--primary);
+        text-decoration: none;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--text-muted);
+        margin-left: 25px;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+      nav a:hover,
+      nav a.active {
+        color: var(--primary);
+      }
+      .container {
+        padding: 140px 8% 60px 8%;
+      }
+      .page-title {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      .page-subtitle {
+        color: var(--text-muted);
+        margin-bottom: 40px;
+        font-size: 16px;
+      }
+      .subjects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+      }
+      .subject-card {
+        background: var(--panel-dark);
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
+        padding: 24px;
+      }
+      .subject-card h3 {
+        font-size: 18px;
+        color: var(--primary);
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .chapters-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .chapter-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 12px 16px;
+        background: rgba(2, 6, 23, 0.4);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        color: var(--text-main);
+        text-decoration: none;
+        font-size: 13.5px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+      .chapter-item:hover {
+        background: rgba(59, 130, 246, 0.08);
+        border-color: var(--primary);
+        transform: translateX(4px);
+      }
+      .play-lbl {
+        font-size: 11px;
+        background: var(--border-color);
+        color: var(--text-muted);
+        padding: 3px 8px;
+        border-radius: 6px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .chapter-item:hover .play-lbl {
+        background: var(--accent);
+        color: white;
+      }
+      footer {
+        text-align: center;
+        padding: 40px;
+        border-top: 1px solid var(--border-color);
+        color: var(--text-muted);
+        font-size: 13px;
+        background: #090d16;
+        margin-top: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">FutureLearn AI</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="primary.html" class="active">Primary (5th)</a>
+        <a href="middle.html">Middle (6th-8th)</a>
+        <a href="high.html">High (9th-10th)</a>
+        <a href="higher-secondary.html">Hr. Secondary (11th-12th)</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1 class="page-title">Primary School Pipeline</h1>
+      <p class="page-subtitle">
+        Standard 5th verified curriculum framework modules. Click to open
+        verified lecture paths.
+      </p>
+
+      <div class="subjects-grid">
+        <div class="subject-card">
+          <h3>Mathematics — Class 5th</h3>
+          <div class="chapters-stack">
+            <a
+              href="https://www.youtube.com/watch?v=PMa5FnQb6hY"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 1: The Fish Tale <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=7_D_vS953sc"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 2: Shapes & Angles <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=69ZbeZ7V_6Q"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 3: How Many Squares? <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=yA3zF_fI7is"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 4: Parts and Wholes <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=s_X8Y06N1ko"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 5: Does it Look the Same?
+              <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=g8Vw_V2lo8A"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 6: Multiples & Factors <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=T8vW9XvMlo8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 7: Can You See Patterns?
+              <span class="play-lbl">Launch</span></a
+            >
+          </div>
+        </div>
+
+        <div class="subject-card">
+          <h3>EVS (Science) — Class 5th</h3>
+          <div class="chapters-stack">
+            <a
+              href="https://www.youtube.com/watch?v=9f7A5W6k_uU"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 1: Super Senses <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=X_pB9S_G8gE"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 2: A Snake Charmer's Story
+              <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=zV_2ZOfw_uA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 3: From Tasting to Digesting
+              <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=PiaY3Vw1Ico"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 4: Mangoes Round the Year
+              <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=v9VpXF9o6pE"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 5: Seeds and Seeds <span class="play-lbl">Launch</span></a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=O_hWshXhG2I"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="chapter-item"
+              >Ch 6: Every Drop Counts <span class="play-lbl">Launch</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2026 FutureLearn AI &mdash; Advanced Multi-Page Curricular
+      Architecture
+    </footer>
+  </body>
+</html>

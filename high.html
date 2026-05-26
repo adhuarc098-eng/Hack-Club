@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>High School Division - FutureLearn AI</title>
+    <style>
+      :root {
+        --bg-dark: #020617;
+        --panel-dark: #0f172a;
+        --border-color: #1e293b;
+        --primary: #3b82f6;
+        --accent: #10b981;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", system-ui, sans-serif;
+      }
+      body {
+        background: var(--bg-dark);
+        color: var(--text-main);
+      }
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 8%;
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+        z-index: 1000;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--primary);
+        text-decoration: none;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--text-muted);
+        margin-left: 25px;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+      nav a:hover,
+      nav a.active {
+        color: var(--primary);
+      }
+      .container {
+        padding: 140px 8% 60px 8%;
+      }
+      .class-filter-bar {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 16px;
+      }
+      .class-tab {
+        padding: 12px 24px;
+        background: var(--panel-dark);
+        border: 1px solid var(--border-color);
+        color: var(--text-muted);
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.2s;
+      }
+      .class-tab:hover,
+      .class-tab.active {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+      .class-content-block {
+        display: none;
+      }
+      .class-content-block.active {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      .subjects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+      }
+      .subject-card {
+        background: var(--panel-dark);
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
+        padding: 24px;
+      }
+      .subject-card h3 {
+        font-size: 18px;
+        color: var(--primary);
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .chapters-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .chapter-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 12px 16px;
+        background: rgba(2, 6, 23, 0.4);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        color: var(--text-main);
+        text-decoration: none;
+        font-size: 13.5px;
+        transition: all 0.2s ease;
+      }
+      .chapter-item:hover {
+        background: rgba(59, 130, 246, 0.08);
+        border-color: var(--primary);
+        transform: translateX(4px);
+      }
+      .play-lbl {
+        font-size: 11px;
+        background: var(--border-color);
+        color: var(--text-muted);
+        padding: 3px 8px;
+        border-radius: 6px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .chapter-item:hover .play-lbl {
+        background: var(--accent);
+        color: white;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      footer {
+        text-align: center;
+        padding: 40px;
+        border-top: 1px solid var(--border-color);
+        color: var(--text-muted);
+        font-size: 13px;
+        background: #090d16;
+        margin-top: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">FutureLearn AI</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="primary.html">Primary (5th)</a>
+        <a href="middle.html">Middle (6th-8th)</a>
+        <a href="high.html" class="active">High (9th-10th)</a>
+        <a href="higher-secondary.html">Hr. Secondary (11th-12th)</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="class-filter-bar">
+        <button class="class-tab active" onclick="navigateClass('class9')">
+          Class 9th
+        </button>
+        <button class="class-tab" onclick="navigateClass('class10')">
+          Class 10th
+        </button>
+      </div>
+
+      <div id="class9" class="class-content-block active">
+        <div class="subjects-grid">
+          <div class="subject-card">
+            <h3>Mathematics — Class 9th</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=zpPG1toQ_b8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Number Systems <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=39pIn_n7zls"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Polynomials <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=E_ObeLwI9k8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Coordinate Geometry
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=0O9XW42LidY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Linear Equations 2V
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=H_X67_g2XmI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Lines and Angles <span class="play-lbl">Launch</span></a
+              >
+            </div>
+          </div>
+          <div class="subject-card">
+            <h3>Science — Class 9th</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=ruHwWNLgBV4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Matter in Surroundings
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=cooKqK6Sg7A"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Is Matter Pure Around Us
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=V-gY6b-3U0E"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Fundamental Unit of Life
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=A3X8uKkaidU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Tissues Framework <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 8: Motion Kinematics <span class="play-lbl">Launch</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="class10" class="class-content-block">
+        <div class="subjects-grid">
+          <div class="subject-card">
+            <h3>Mathematics — Class 10th</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=s7Y976auPwE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Real Numbers <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=zpPG1toQ_b8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Polynomials <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=39pIn_n7zls"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Pair of Linear Equations
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=E_ObeLwI9k8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Quadratic Equations
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=0O9XW42LidY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Arithmetic Progressions
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=H_X67_g2XmI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Triangles Proofs <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=6KszR_C06uU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 7: Coordinate Geometry
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=f_O0xWwO4Kk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 8: Intro to Trigonometry
+                <span class="play-lbl">Launch</span></a
+              >
+            </div>
+          </div>
+          <div class="subject-card">
+            <h3>Science — Class 10th</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=OSy70X0Cn20"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Chemical Reactions
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=ruHwWNLgBV4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Acids, Bases & Salts
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=cooKqK6Sg7A"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Metals & Non-Metals
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=V-gY6b-3U0E"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Carbon & Compounds
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Life Processes <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=X2pU986Kj_g"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 7: Control & Coordination
+                <span class="play-lbl">Launch</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=mAt61882WjM"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 10: Light & Optics <span class="play-lbl">Launch</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2026 FutureLearn AI &mdash; Advanced Multi-Page Curricular
+      Architecture
+    </footer>
+
+    <script>
+      function navigateClass(classId) {
+        document
+          .querySelectorAll(".class-content-block")
+          .forEach((b) => b.classList.remove("active"));
+        document
+          .querySelectorAll(".class-tab")
+          .forEach((t) => t.classList.remove("active"));
+        document.getElementById(classId).classList.add("active");
+        event.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
