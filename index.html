@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FutureLearn AI - JKBOSE Portal</title>
+    <title>FutureLearn AI - Academic Navigation Hub</title>
     <style>
       :root {
         --bg-dark: #020617;
@@ -64,9 +64,11 @@
         color: var(--primary);
       }
 
+      /* INFO & HERO SECTION */
       .hero {
-        min-height: 50vh;
+        min-height: 40vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -81,9 +83,10 @@
       }
 
       .hero h1 {
-        font-size: 48px;
+        font-size: 42px;
         font-weight: 800;
         line-height: 1.2;
+        margin-bottom: 16px;
       }
 
       .hero span {
@@ -92,113 +95,70 @@
       }
 
       .hero p {
-        margin-top: 15px;
-        font-size: 18px;
         color: var(--text-muted);
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 600px;
+        font-size: 16px;
+        line-height: 1.6;
       }
 
       .section {
-        padding: 40px 8%;
+        padding: 10px 8% 60px 8%;
       }
 
-      .section-heading {
-        text-align: center;
-        margin-bottom: 40px;
-      }
-
-      .section-heading h2 {
-        font-size: 32px;
-        font-weight: 700;
-        color: var(--text-main);
-      }
-
-      .section-heading p {
-        color: var(--text-muted);
-        margin-top: 8px;
-        font-size: 16px;
-      }
-
-      /* VIDEO PLAYER SYSTEM */
-      .player-container {
-        background: var(--panel-dark);
-        padding: 24px;
-        border-radius: 20px;
+      /* INTUITIVE INFO STRIP */
+      .info-banner {
+        background: rgba(59, 130, 246, 0.05);
         border: 1px solid var(--border-color);
-        margin-bottom: 50px;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      @media (min-width: 992px) {
-        .player-container {
-          grid-template-columns: 2.3fr 1fr;
-        }
-      }
-
-      .video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
+        padding: 16px 24px;
         border-radius: 12px;
-        background: #000;
-      }
-
-      .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-
-      .player-info {
+        margin-bottom: 40px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 10px;
+        align-items: center;
+        gap: 12px;
       }
 
-      .player-info span {
+      .info-banner-icon {
         color: var(--accent);
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        margin-bottom: 6px;
+        font-weight: bold;
+        font-size: 18px;
       }
 
-      .player-info h3 {
-        font-size: 22px;
-        font-weight: 600;
-        line-height: 1.4;
+      .info-banner p {
+        font-size: 14px;
+        color: var(--text-main);
+        line-height: 1.5;
       }
 
-      /* HIERARCHICAL CLASSES FILTER */
+      /* NAVIGATION ARCHITECTURE */
       .class-filter-bar {
         display: flex;
-        gap: 10px;
+        gap: 12px;
         overflow-x: auto;
-        padding: 10px 0 20px 0;
+        padding: 10px 0 25px 0;
         border-bottom: 1px solid var(--border-color);
         margin-bottom: 40px;
       }
 
+      /* Hide default scrollbars for modern dashboard appearance */
+      .class-filter-bar::-webkit-scrollbar {
+        height: 4px;
+      }
+      .class-filter-bar::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 4px;
+      }
+
       .class-tab {
-        padding: 12px 24px;
+        padding: 14px 28px;
         background: var(--panel-dark);
         border: 1px solid var(--border-color);
         color: var(--text-muted);
-        border-radius: 8px;
+        border-radius: 10px;
         cursor: pointer;
+        font-size: 15px;
         font-weight: 600;
         white-space: nowrap;
-        transition: all 0.2s ease;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       .class-tab:hover,
@@ -206,7 +166,8 @@
         background: var(--primary);
         color: white;
         border-color: var(--primary);
-        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        box-shadow: 0 4px 20px var(--primary-glow);
+        transform: translateY(-2px);
       }
 
       .class-content-block {
@@ -215,10 +176,10 @@
 
       .class-content-block.active {
         display: block;
-        animation: fadeIn 0.3s ease-in-out;
+        animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      /* SUBJECT CARDS ARCHITECTURE */
+      /* SUBJECT & CHAPTER CLUSTERS */
       .subjects-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -230,26 +191,32 @@
         border-radius: 16px;
         border: 1px solid var(--border-color);
         padding: 24px;
-        transition: border-color 0.3s;
-      }
-
-      .subject-card:hover {
-        border-color: rgba(59, 130, 246, 0.4);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       }
 
       .subject-card h3 {
-        font-size: 20px;
+        font-size: 18px;
         color: var(--primary);
         margin-bottom: 16px;
         padding-bottom: 8px;
         border-bottom: 1px solid var(--border-color);
       }
 
-      /* CHAPTER BUTTONS */
       .chapters-stack {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        max-height: 400px;
+        overflow-y: auto;
+        padding-right: 5px;
+      }
+
+      .chapters-stack::-webkit-scrollbar {
+        width: 4px;
+      }
+      .chapters-stack::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 4px;
       }
 
       .chapter-item {
@@ -258,18 +225,20 @@
         align-items: center;
         width: 100%;
         padding: 12px 16px;
-        background: rgba(2, 6, 23, 0.5);
+        background: rgba(2, 6, 23, 0.4);
         border: 1px solid var(--border-color);
         border-radius: 8px;
         color: var(--text-main);
         text-align: left;
+        text-decoration: none;
+        font-size: 13.5px;
+        font-weight: 500;
         cursor: pointer;
-        font-size: 14px;
         transition: all 0.2s ease;
       }
 
       .chapter-item:hover {
-        background: rgba(59, 130, 246, 0.1);
+        background: rgba(59, 130, 246, 0.08);
         border-color: var(--primary);
         transform: translateX(4px);
       }
@@ -278,10 +247,12 @@
         font-size: 11px;
         background: var(--border-color);
         color: var(--text-muted);
-        padding: 4px 8px;
-        border-radius: 4px;
-        font-weight: bold;
+        padding: 3px 8px;
+        border-radius: 6px;
         text-transform: uppercase;
+        font-weight: 700;
+        white-space: nowrap;
+        transition: all 0.2s ease;
       }
 
       .chapter-item:hover .play-lbl {
@@ -290,68 +261,30 @@
       }
 
       .stream-divider {
-        font-size: 14px;
+        font-size: 13px;
         text-transform: uppercase;
         letter-spacing: 1px;
-        color: var(--text-muted);
-        margin: 30px 0 15px 0;
-        border-left: 3px solid var(--accent);
-        padding-left: 10px;
+        color: var(--accent);
+        margin: 25px 0 10px 0;
+        border-left: 3px solid var(--primary);
+        padding-left: 8px;
         grid-column: 1 / -1;
-      }
-
-      .contact-form {
-        max-width: 600px;
-        margin: auto;
-        background: var(--panel-dark);
-        padding: 35px;
-        border-radius: 16px;
-        border: 1px solid var(--border-color);
-      }
-
-      .contact-form input,
-      .contact-form textarea {
-        width: 100%;
-        padding: 14px;
-        margin-top: 15px;
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        background: var(--bg-dark);
-        color: white;
-        font-size: 15px;
-      }
-
-      .btn {
-        width: 100%;
-        padding: 14px;
-        margin-top: 20px;
-        background: var(--primary);
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-
-      .btn:hover {
-        background: #1d4ed8;
       }
 
       footer {
         text-align: center;
-        padding: 35px;
+        padding: 40px;
         border-top: 1px solid var(--border-color);
         color: var(--text-muted);
-        font-size: 14px;
+        font-size: 13px;
         background: #090d16;
-        margin-top: 60px;
+        margin-top: 80px;
       }
 
       @keyframes fadeIn {
         from {
           opacity: 0;
-          transform: translateY(8px);
+          transform: translateY(10px);
         }
         to {
           opacity: 1;
@@ -365,59 +298,32 @@
     <header>
       <div class="logo">FutureLearn AI</div>
       <nav>
-        <a href="#">Home</a>
-        <a href="#classroom">Classroom Hub</a>
-        <a href="#contact">Contact</a>
+        <a href="#">Portal Home</a>
+        <a href="#navigation-matrix">Curriculum Index</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div>
-        <h1>Unified <span>JKBOSE Academic</span> Hub</h1>
-        <p>
-          Seamlessly pivot across classes, focus on explicit subjects, and
-          stream verified chapter modules.
-        </p>
-      </div>
+      <h1>JKBOSE Complete <span>Curriculum Engine</span></h1>
+      <p>
+        Select your standard below to deploy mapped content blocks, master
+        syllabus tracks, and official study structures immediately.
+      </p>
     </section>
 
-    <!-- CONTENT CONTROLLER MODULE -->
-    <section class="section" id="classroom">
-      <div class="section-heading">
-        <h2>Interactive Virtual Studio</h2>
+    <section class="section" id="navigation-matrix">
+      <!-- SYSTEM METADATA INFO BANNER -->
+      <div class="info-banner">
+        <div class="info-banner-icon">ℹ</div>
         <p>
-          Segmented configuration layout displaying standard local school
-          frameworks
+          <strong>Direct Route Interface:</strong> No video previews or demo
+          assets are mounted on this workspace. Use the class selection
+          navigation cluster directly to browse chapters across target
+          educational paths.
         </p>
       </div>
 
-      <!-- VIDEO MONITOR BLOCK -->
-      <div class="player-container">
-        <div class="video-wrapper">
-          <iframe
-            id="videoPlayer"
-            src="https://www.youtube.com/embed/s7Y976auPwE"
-            allow="
-              accelerometer;
-              autoplay;
-              clipboard-write;
-              encrypted-media;
-              gyroscope;
-              picture-in-picture;
-            "
-            allowfullscreen
-          >
-          </iframe>
-        </div>
-        <div class="player-info">
-          <span>Active Transmission</span>
-          <h3 id="currentVideoTitle">
-            Class 10 Mathematics — Chapter 1: Real Numbers
-          </h3>
-        </div>
-      </div>
-
-      <!-- CLASS INTERACTIVE SELECTOR LAYER -->
+      <!-- MAIN CLASS NAVIGATION CLUSTER -->
       <div class="class-filter-bar">
         <button class="class-tab" onclick="navigateClass('class5')">
           Class 5th
@@ -445,274 +351,704 @@
         </button>
       </div>
 
-      <!-- ================= CLASS 5 DATA PACKET ================= -->
+      <!-- ================= CLASS 5 DATA MODULE ================= -->
       <div id="class5" class="class-content-block">
         <div class="subjects-grid">
           <div class="subject-card">
             <h3>Mathematics</h3>
             <div class="chapters-stack">
-              <button
+              <a
+                href="https://www.youtube.com/watch?v=PMa5FnQb6hY"
+                target="_blank"
                 class="chapter-item"
-                onclick="
-                  playLesson(
-                    'PMa5FnQb6hY',
-                    'Class 5 Math — Chapter 1: The Fish Tale',
-                  )
-                "
+                >Ch 1: The Fish Tale <span class="play-lbl">Open</span></a
               >
-                Chapter 1: The Fish Tale <span class="play-lbl">Stream</span>
-              </button>
+              <a
+                href="https://www.youtube.com/watch?v=7_D_vS953sc"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Shapes & Angles <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=69ZbeZ7V_6Q"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: How Many Squares? <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=yA3zF_fI7is"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Parts and Wholes <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=s_X8Y06N1ko"
+                target="_blank"
+                class="chapter-item"
+                >Ch 5: Does it Look the Same?
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=g8Vw_V2lo8A"
+                target="_blank"
+                class="chapter-item"
+                >Ch 6: Multiples & Factors <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T8vW9XvMlo8"
+                target="_blank"
+                class="chapter-item"
+                >Ch 7: Can You See Patterns?
+                <span class="play-lbl">Open</span></a
+              >
+            </div>
+          </div>
+          <div class="subject-card">
+            <h3>EVS (Science)</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=9f7A5W6k_uU"
+                target="_blank"
+                class="chapter-item"
+                >Ch 1: Super Senses <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=X_pB9S_G8gE"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: A Snake Charmer's Story
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=zV_2ZOfw_uA"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: From Tasting to Digesting
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=PiaY3Vw1Ico"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Mangoes Round the Year
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=v9VpXF9o6pE"
+                target="_blank"
+                class="chapter-item"
+                >Ch 5: Seeds and Seeds <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=O_hWshXhG2I"
+                target="_blank"
+                class="chapter-item"
+                >Ch 6: Every Drop Counts <span class="play-lbl">Open</span></a
+              >
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ================= CLASS 6 DATA PACKET ================= -->
+      <!-- ================= CLASS 6 DATA MODULE ================= -->
       <div id="class6" class="class-content-block">
         <div class="subjects-grid">
           <div class="subject-card">
+            <h3>Mathematics</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=6KszR_C06uU"
+                target="_blank"
+                class="chapter-item"
+                >Ch 1: Knowing Our Numbers <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=f_O0xWwO4Kk"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Whole Numbers <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=v9VpXF9o6pE"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Playing with Numbers
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=D-0lWf5n_Xg"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Geometrical Ideas <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=8K_A0XW2gXk"
+                target="_blank"
+                class="chapter-item"
+                >Ch 5: Elementary Shapes <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=y_N5p_5O-8A"
+                target="_blank"
+                class="chapter-item"
+                >Ch 6: Integers <span class="play-lbl">Open</span></a
+              >
+            </div>
+          </div>
+          <div class="subject-card">
             <h3>Science</h3>
             <div class="chapters-stack">
-              <button
+              <a
+                href="https://www.youtube.com/watch?v=A3X8uKkaidU"
+                target="_blank"
                 class="chapter-item"
-                onclick="
-                  playLesson(
-                    'A3X8uKkaidU',
-                    'Class 6 Science — Components of Food',
-                  )
-                "
+                >Ch 1: Components of Food <span class="play-lbl">Open</span></a
               >
-                Components of Food <span class="play-lbl">Stream</span>
-              </button>
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Sorting Materials <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=O_hWshXhG2I"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Separation of Substances
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=A2oXyGleKuo"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Getting to Know Plants
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=ruHwWNLgBV4"
+                target="_blank"
+                class="chapter-item"
+                >Ch 5: Body Movements <span class="play-lbl">Open</span></a
+              >
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ================= CLASS 7 DATA PACKET ================= -->
+      <!-- ================= CLASS 7 DATA MODULE ================= -->
       <div id="class7" class="class-content-block">
         <div class="subjects-grid">
           <div class="subject-card">
-            <h3>Science</h3>
+            <h3>Mathematics</h3>
             <div class="chapters-stack">
-              <button
+              <a
+                href="https://www.youtube.com/watch?v=0O9XW42LidY"
+                target="_blank"
                 class="chapter-item"
-                onclick="
-                  playLesson(
-                    'vPhG4r5-Eis',
-                    'Class 7 Science — Nutrition in Plants',
-                  )
-                "
+                >Ch 1: Integers <span class="play-lbl">Open</span></a
               >
-                Nutrition in Plants <span class="play-lbl">Stream</span>
-              </button>
+              <a
+                href="https://www.youtube.com/watch?v=H_X67_g2XmI"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Fractions & Decimals
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=LN97CstR8v0"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Data Handling <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=4i12p5p_58k"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Simple Equations <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=6KszR_C06uU"
+                target="_blank"
+                class="chapter-item"
+                >Ch 5: Lines and Angles <span class="play-lbl">Open</span></a
+              >
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- ================= CLASS 8 DATA PACKET ================= -->
-      <div id="class8" class="class-content-block">
-        <div class="subjects-grid">
           <div class="subject-card">
             <h3>Science</h3>
             <div class="chapters-stack">
-              <button
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
                 class="chapter-item"
-                onclick="
-                  playLesson(
-                    'cooKqK6Sg7A',
-                    'Class 8 Science — Crop Production & Management',
-                  )
-                "
+                >Ch 1: Nutrition in Plants <span class="play-lbl">Open</span></a
               >
-                Crop Production <span class="play-lbl">Stream</span>
-              </button>
+              <a
+                href="https://www.youtube.com/watch?v=X2pU986Kj_g"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Nutrition in Animals
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=cooKqK6Sg7A"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Heat and Temperature
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=V-gY6b-3U0E"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Acids, Bases & Salts
+                <span class="play-lbl">Open</span></a
+              >
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ================= CLASS 9 DATA PACKET ================= -->
+      <!-- ================= CLASS 8 DATA MODULE ================= -->
+      <div id="class8" class="class-content-block">
+        <div class="subjects-grid">
+          <div class="subject-card">
+            <h3>Mathematics</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=39pIn_n7zls"
+                target="_blank"
+                class="chapter-item"
+                >Ch 1: Rational Numbers <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=E_ObeLwI9k8"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Linear Equations <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=0O9XW42LidY"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Understanding Quadrilaterals
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=H_X67_g2XmI"
+                target="_blank"
+                class="chapter-item"
+                >Ch 5: Squares and Roots <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=6KszR_C06uU"
+                target="_blank"
+                class="chapter-item"
+                >Ch 6: Cubes and Cube Roots
+                <span class="play-lbl">Open</span></a
+              >
+            </div>
+          </div>
+          <div class="subject-card">
+            <h3>Science</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=cooKqK6Sg7A"
+                target="_blank"
+                class="chapter-item"
+                >Ch 1: Crop Production & Mgmt
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=V-gY6b-3U0E"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Microorganisms <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=A3X8uKkaidU"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Coal and Petroleum <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Combustion & Flame <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
+                class="chapter-item"
+                >Ch 5: Conservation Ecosystem
+                <span class="play-lbl">Open</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= CLASS 9 DATA MODULE ================= -->
       <div id="class9" class="class-content-block">
         <div class="subjects-grid">
           <div class="subject-card">
             <h3>Mathematics</h3>
             <div class="chapters-stack">
-              <button
+              <a
+                href="https://www.youtube.com/watch?v=zpPG1toQ_b8"
+                target="_blank"
                 class="chapter-item"
-                onclick="
-                  playLesson(
-                    'zpPG1toQ_b8',
-                    'Class 9 Math — Chapter 1: Number Systems',
-                  )
-                "
+                >Ch 1: Number Systems <span class="play-lbl">Open</span></a
               >
-                Chapter 1: Number Systems <span class="play-lbl">Stream</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ================= CLASS 10 DATA PACKET ================= -->
-      <div id="class10" class="class-content-block active">
-        <div class="subjects-grid">
-          <div class="subject-card">
-            <h3>Mathematics</h3>
-            <div class="chapters-stack">
-              <button
+              <a
+                href="https://www.youtube.com/watch?v=39pIn_n7zls"
+                target="_blank"
                 class="chapter-item"
-                onclick="
-                  playLesson(
-                    's7Y976auPwE',
-                    'Class 10 Math — Chapter 1: Real Numbers',
-                  )
-                "
+                >Ch 2: Polynomials <span class="play-lbl">Open</span></a
               >
-                Chapter 1: Real Numbers <span class="play-lbl">Stream</span>
-              </button>
+              <a
+                href="https://www.youtube.com/watch?v=E_ObeLwI9k8"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Coordinate Geometry <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=0O9XW42LidY"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Linear Equations 2V <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=H_X67_g2XmI"
+                target="_blank"
+                class="chapter-item"
+                >Ch 6: Lines and Angles <span class="play-lbl">Open</span></a
+              >
             </div>
           </div>
           <div class="subject-card">
             <h3>Science</h3>
             <div class="chapters-stack">
-              <button
+              <a
+                href="https://www.youtube.com/watch?v=ruHwWNLgBV4"
+                target="_blank"
                 class="chapter-item"
-                onclick="
-                  playLesson(
-                    'OSy70X0Cn20',
-                    'Class 10 Science — Chapter 1: Chemical Reactions & Equations',
-                  )
-                "
+                >Ch 1: Matter in Surroundings
+                <span class="play-lbl">Open</span></a
               >
-                Chapter 1: Chemical Reactions
-                <span class="play-lbl">Stream</span>
-              </button>
+              <a
+                href="https://www.youtube.com/watch?v=cooKqK6Sg7A"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Is Matter Around Us Pure
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=V-gY6b-3U0E"
+                target="_blank"
+                class="chapter-item"
+                >Ch 5: Cell - Fundamental Unit
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=A3X8uKkaidU"
+                target="_blank"
+                class="chapter-item"
+                >Ch 6: Tissues Framework <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                class="chapter-item"
+                >Ch 8: Motion Kinematics <span class="play-lbl">Open</span></a
+              >
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ================= CLASS 11 DATA PACKET ================= -->
+      <!-- ================= CLASS 10 DATA MODULE (DEFAULT) ================= -->
+      <div id="class10" class="class-content-block active">
+        <div class="subjects-grid">
+          <div class="subject-card">
+            <h3>Mathematics</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=s7Y976auPwE"
+                target="_blank"
+                class="chapter-item"
+                >Ch 1: Real Numbers <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=zpPG1toQ_b8"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Polynomials <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=39pIn_n7zls"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Pair of Linear Equations
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=E_ObeLwI9k8"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Quadratic Equations <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=0O9XW42LidY"
+                target="_blank"
+                class="chapter-item"
+                >Ch 5: Arithmetic Progressions
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=H_X67_g2XmI"
+                target="_blank"
+                class="chapter-item"
+                >Ch 6: Triangles Proofs <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=6KszR_C06uU"
+                target="_blank"
+                class="chapter-item"
+                >Ch 7: Coordinate Geometry <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=f_O0xWwO4Kk"
+                target="_blank"
+                class="chapter-item"
+                >Ch 8: Intro to Trigonometry
+                <span class="play-lbl">Open</span></a
+              >
+            </div>
+          </div>
+          <div class="subject-card">
+            <h3>Science</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=OSy70X0Cn20"
+                target="_blank"
+                class="chapter-item"
+                >Ch 1: Chemical Reactions <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=ruHwWNLgBV4"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Acids, Bases & Salts
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=cooKqK6Sg7A"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Metals & Non-Metals <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=V-gY6b-3U0E"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Carbon & Compounds <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
+                class="chapter-item"
+                >Ch 6: Life Processes <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=X2pU986Kj_g"
+                target="_blank"
+                class="chapter-item"
+                >Ch 7: Control & Coordination
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=mAt61882WjM"
+                target="_blank"
+                class="chapter-item"
+                >Ch 10: Light & Optics <span class="play-lbl">Open</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= CLASS 11 DATA MODULE ================= -->
       <div id="class11" class="class-content-block">
         <div class="subjects-grid">
-          <div class="stream-divider">Medical & Non-Medical Streams</div>
+          <div class="stream-divider">Science Stream Faculty</div>
           <div class="subject-card">
             <h3>Physics</h3>
             <div class="chapters-stack">
-              <button
+              <a
+                href="https://www.youtube.com/watch?v=WvI6G-Lz8w8"
+                target="_blank"
                 class="chapter-item"
-                onclick="
-                  playLesson(
-                    'WvI6G-Lz8w8',
-                    'Class 11 Physics — Units and Measurements',
-                  )
-                "
+                >Ch 1: Units & Measurements
+                <span class="play-lbl">Open</span></a
               >
-                Units & Measurements <span class="play-lbl">Stream</span>
-              </button>
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Motion Straight Line
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=A3X8uKkaidU"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Laws of Motion <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=O_hWshXhG2I"
+                target="_blank"
+                class="chapter-item"
+                >Ch 5: Work, Energy & Power
+                <span class="play-lbl">Open</span></a
+              >
+            </div>
+          </div>
+          <div class="subject-card">
+            <h3>Chemistry</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=Y-bCq8wX8w0"
+                target="_blank"
+                class="chapter-item"
+                >Ch 1: Basic Concepts <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Structure of Atom <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=X2pU986Kj_g"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Periodic Classification
+                <span class="play-lbl">Open</span></a
+              >
+            </div>
+          </div>
+
+          <div class="stream-divider">Commerce Track</div>
+          <div class="subject-card">
+            <h3>Accountancy</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=Vmh00j8XW0k"
+                target="_blank"
+                class="chapter-item"
+                >Ch 1: Intro to Accounting <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=y_N5p_5O-8A"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Theory Base Framework
+                <span class="play-lbl">Open</span></a
+              >
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ================= CLASS 12 DATA PACKET ================= -->
+      <!-- ================= CLASS 12 DATA MODULE ================= -->
       <div id="class12" class="class-content-block">
         <div class="subjects-grid">
-          <div class="stream-divider">Science Board Track</div>
+          <div class="stream-divider">Science Boards Stream</div>
           <div class="subject-card">
             <h3>Physics</h3>
             <div class="chapters-stack">
-              <button
+              <a
+                href="https://www.youtube.com/watch?v=8b_XwW8x8Mk"
+                target="_blank"
                 class="chapter-item"
-                onclick="
-                  playLesson(
-                    '8b_XwW8x8Mk',
-                    'Class 12 Physics — Current Electricity',
-                  )
-                "
+                >Ch 3: Current Electricity <span class="play-lbl">Open</span></a
               >
-                Current Electricity <span class="play-lbl">Stream</span>
-              </button>
+              <a
+                href="https://www.youtube.com/watch?v=WvI6G-Lz8w8"
+                target="_blank"
+                class="chapter-item"
+                >Ch 4: Moving Charges & Mag
+                <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                class="chapter-item"
+                >Ch 6: Electromagnetic Induction
+                <span class="play-lbl">Open</span></a
+              >
+            </div>
+          </div>
+          <div class="subject-card">
+            <h3>Chemistry</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=w_NbM8XwI78"
+                target="_blank"
+                class="chapter-item"
+                >Ch 1: Solutions <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=Y-bCq8wX8w0"
+                target="_blank"
+                class="chapter-item"
+                >Ch 2: Electrochemistry <span class="play-lbl">Open</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
+                class="chapter-item"
+                >Ch 3: Chemical Kinetics <span class="play-lbl">Open</span></a
+              >
+            </div>
+          </div>
+
+          <div class="stream-divider">Commerce Boards Track</div>
+          <div class="subject-card">
+            <h3>Economics</h3>
+            <div class="chapters-stack">
+              <a
+                href="https://www.youtube.com/watch?v=XyN6U8x7M9A"
+                target="_blank"
+                class="chapter-item"
+                >Ch 1: Intro Macroeconomics
+                <span class="play-lbl">Open</span></a
+              >
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- SUPPORT SUBMISSION DESK -->
-    <section class="section" id="contact">
-      <div class="contact-form">
-        <h2 style="font-size: 24px; margin-bottom: 15px; text-align: center">
-          Syllabus Help Desk
-        </h2>
-        <input type="text" id="name" placeholder="Student Full Name" />
-        <input
-          type="email"
-          id="email"
-          placeholder="Parent or Student Email Address"
-        />
-        <textarea
-          id="message"
-          rows="4"
-          placeholder="Request additional JKBOSE specialized modules..."
-        ></textarea>
-        <button class="btn" onclick="fireTicket()">Submit Ticket</button>
       </div>
     </section>
 
     <footer>
-      &copy; 2026 FutureLearn AI &mdash; Advanced JKBOSE Virtual Academic
-      Pipeline System
+      &copy; 2026 FutureLearn AI &mdash; Advanced Performance Navigation
+      Architecture
     </footer>
 
     <script>
-      function playLesson(videoCode, lessonTitle) {
-        const playerFrame = document.getElementById("videoPlayer");
-        // Bypasses embedding restrictions using official live YouTube embed links
-        playerFrame.src =
-          "https://www.youtube.com/embed/" + videoCode + "?rel=0&autoplay=1";
-        document.getElementById("currentVideoTitle").innerText = lessonTitle;
-
-        // Smooth scroll focus adjustment
-        document
-          .querySelector(".player-container")
-          .scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-
       function navigateClass(classBlockId) {
+        // Disables inactive blocks smoothly
         const contentBlocks = document.querySelectorAll(".class-content-block");
         contentBlocks.forEach((block) => block.classList.remove("active"));
 
+        // Swaps navigation header states cleanly
         const structuralTabs = document.querySelectorAll(".class-tab");
         structuralTabs.forEach((tab) => tab.classList.remove("active"));
 
         document.getElementById(classBlockId).classList.add("active");
         event.currentTarget.classList.add("active");
-      }
-
-      function fireTicket() {
-        const studentName = document.getElementById("name").value;
-        const mailRoute = document.getElementById("email").value;
-        const queryMsg = document.getElementById("message").value;
-
-        if (!studentName || !mailRoute || !queryMsg) {
-          alert(
-            "Please complete the information fields before processing technical tickets.",
-          );
-          return;
-        }
-        window.location.href =
-          "mailto:desk@futurelearnjkbose.edu?subject=Curriculum Modification&body=" +
-          encodeURIComponent(
-            "User: " +
-              studentName +
-              "\nRoute: " +
-              mailRoute +
-              "\n\nDetails:\n" +
-              queryMsg,
-          );
       }
     </script>
   </body>
