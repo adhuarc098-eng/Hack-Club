@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         scroll-behavior: smooth;
       }
 
@@ -73,7 +73,13 @@
         align-items: center;
         text-align: center;
         padding: 140px 10% 40px 10%;
-        background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 60%), var(--bg-dark);
+        background:
+          radial-gradient(
+            circle at top,
+            rgba(59, 130, 246, 0.15),
+            transparent 60%
+          ),
+          var(--bg-dark);
       }
 
       .hero h1 {
@@ -154,7 +160,8 @@
         transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      .class-tab:hover, .class-tab.active {
+      .class-tab:hover,
+      .class-tab.active {
         background: var(--primary);
         color: white;
         border-color: var(--primary);
@@ -274,8 +281,14 @@
       }
 
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
@@ -291,26 +304,49 @@
 
     <section class="hero">
       <h1>JKBOSE Complete <span>Curriculum Engine</span></h1>
-      <p>Select your standard below to launch unblocked external lectures, verified chapter playlists, and official study modules instantly.</p>
+      <p>
+        Select your standard below to launch unblocked external lectures,
+        verified chapter playlists, and official study modules instantly.
+      </p>
     </section>
 
     <section class="section" id="navigation-matrix">
       <!-- PROTOCOL FIX BANNER -->
       <div class="info-banner">
         <div class="info-banner-icon">✓</div>
-        <p><strong>Verified External Protocol Route:</strong> Embedded players have been decommissioned to eliminate blockages. Every single route below now directly maps to completely unrestricted external pathways.</p>
+        <p>
+          <strong>Verified External Protocol Route:</strong> Embedded players
+          have been decommissioned to eliminate blockages. Every single route
+          below now directly maps to completely unrestricted external pathways.
+        </p>
       </div>
 
       <!-- MAIN CLASS NAVIGATION CLUSTER -->
       <div class="class-filter-bar">
-        <button class="class-tab" onclick="navigateClass('class5')">Class 5th</button>
-        <button class="class-tab" onclick="navigateClass('class6')">Class 6th</button>
-        <button class="class-tab" onclick="navigateClass('class7')">Class 7th</button>
-        <button class="class-tab" onclick="navigateClass('class8')">Class 8th</button>
-        <button class="class-tab" onclick="navigateClass('class9')">Class 9th</button>
-        <button class="class-tab active" onclick="navigateClass('class10')">Class 10th</button>
-        <button class="class-tab" onclick="navigateClass('class11')">Class 11th</button>
-        <button class="class-tab" onclick="navigateClass('class12')">Class 12th</button>
+        <button class="class-tab" onclick="navigateClass('class5')">
+          Class 5th
+        </button>
+        <button class="class-tab" onclick="navigateClass('class6')">
+          Class 6th
+        </button>
+        <button class="class-tab" onclick="navigateClass('class7')">
+          Class 7th
+        </button>
+        <button class="class-tab" onclick="navigateClass('class8')">
+          Class 8th
+        </button>
+        <button class="class-tab" onclick="navigateClass('class9')">
+          Class 9th
+        </button>
+        <button class="class-tab active" onclick="navigateClass('class10')">
+          Class 10th
+        </button>
+        <button class="class-tab" onclick="navigateClass('class11')">
+          Class 11th
+        </button>
+        <button class="class-tab" onclick="navigateClass('class12')">
+          Class 12th
+        </button>
       </div>
 
       <!-- ================= CLASS 5 DATA MODULE ================= -->
@@ -319,24 +355,115 @@
           <div class="subject-card">
             <h3>Mathematics</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=PMa5FnQb6hY" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: The Fish Tale <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=7_D_vS953sc" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Shapes & Angles <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=69ZbeZ7V_6Q" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: How Many Squares? <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=yA3zF_fI7is" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Parts and Wholes <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=s_X8Y06N1ko" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 5: Does it Look the Same? <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=g8Vw_V2lo8A" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 6: Multiples & Factors <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=T8vW9XvMlo8" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 7: Can You See Patterns? <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=PMa5FnQb6hY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: The Fish Tale
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=7_D_vS953sc"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Shapes & Angles
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=69ZbeZ7V_6Q"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: How Many Squares?
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=yA3zF_fI7is"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Parts and Wholes
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=s_X8Y06N1ko"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Does it Look the Same?
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=g8Vw_V2lo8A"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Multiples & Factors
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T8vW9XvMlo8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 7: Can You See Patterns?
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
           <div class="subject-card">
             <h3>EVS (Science)</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=9f7A5W6k_uU" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Super Senses <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=X_pB9S_G8gE" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: A Snake Charmer's Story <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=zV_2ZOfw_uA" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: From Tasting to Digesting <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=PiaY3Vw1Ico" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Mangoes Round the Year <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=v9VpXF9o6pE" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 5: Seeds and Seeds <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=O_hWshXhG2I" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 6: Every Drop Counts <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=9f7A5W6k_uU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Super Senses
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=X_pB9S_G8gE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: A Snake Charmer's Story
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=zV_2ZOfw_uA"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: From Tasting to Digesting
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=PiaY3Vw1Ico"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Mangoes Round the Year
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=v9VpXF9o6pE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Seeds and Seeds
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=O_hWshXhG2I"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Every Drop Counts
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
         </div>
@@ -348,22 +475,98 @@
           <div class="subject-card">
             <h3>Mathematics</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=6KszR_C06uU" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Knowing Our Numbers <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=f_O0xWwO4Kk" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Whole Numbers <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=v9VpXF9o6pE" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Playing with Numbers <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=D-0lWf5n_Xg" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Geometrical Ideas <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=8K_A0XW2gXk" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 5: Elementary Shapes <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=y_N5p_5O-8A" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 6: Integers <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=6KszR_C06uU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Knowing Our Numbers
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=f_O0xWwO4Kk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Whole Numbers
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=v9VpXF9o6pE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Playing with Numbers
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=D-0lWf5n_Xg"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Geometrical Ideas
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=8K_A0XW2gXk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Elementary Shapes
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=y_N5p_5O-8A"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Integers <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
           <div class="subject-card">
             <h3>Science</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=A3X8uKkaidU" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Components of Food <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=T-D9mB96gno" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Sorting Materials <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=O_hWshXhG2I" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Separation of Substances <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=A2oXyGleKuo" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Getting to Know Plants <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=ruHwWNLgBV4" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 5: Body Movements <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=A3X8uKkaidU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Components of Food
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Sorting Materials
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=O_hWshXhG2I"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Separation of Substances
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=A2oXyGleKuo"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Getting to Know Plants
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=ruHwWNLgBV4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Body Movements
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
         </div>
@@ -375,20 +578,82 @@
           <div class="subject-card">
             <h3>Mathematics</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=0O9XW42LidY" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Integers <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=H_X67_g2XmI" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Fractions & Decimals <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=LN97CstR8v0" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Data Handling <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=4i12p5p_58k" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Simple Equations <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=6KszR_C06uU" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 5: Lines and Angles <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=0O9XW42LidY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Integers <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=H_X67_g2XmI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Fractions & Decimals
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=LN97CstR8v0"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Data Handling
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=4i12p5p_58k"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Simple Equations
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=6KszR_C06uU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Lines and Angles
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
           <div class="subject-card">
             <h3>Science</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=vPhG4r5-Eis" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Nutrition in Plants <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=X2pU986Kj_g" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Nutrition in Animals <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=cooKqK6Sg7A" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Heat and Temperature <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=V-gY6b-3U0E" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Acids, Bases & Salts <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Nutrition in Plants
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=X2pU986Kj_g"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Nutrition in Animals
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=cooKqK6Sg7A"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Heat and Temperature
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=V-gY6b-3U0E"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Acids, Bases & Salts
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
         </div>
@@ -400,21 +665,91 @@
           <div class="subject-card">
             <h3>Mathematics</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=39pIn_n7zls" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Rational Numbers <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=E_ObeLwI9k8" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Linear Equations <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=0O9XW42LidY" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Understanding Quadrilaterals <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=H_X67_g2XmI" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 5: Squares and Roots <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=6KszR_C06uU" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 6: Cubes and Cube Roots <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=39pIn_n7zls"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Rational Numbers
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=E_ObeLwI9k8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Linear Equations
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=0O9XW42LidY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Understanding Quadrilaterals
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=H_X67_g2XmI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Squares and Roots
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=6KszR_C06uU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Cubes and Cube Roots
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
           <div class="subject-card">
             <h3>Science</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=cooKqK6Sg7A" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Crop Production & Mgmt <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=V-gY6b-3U0E" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Microorganisms <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=A3X8uKkaidU" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Coal and Petroleum <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=T-D9mB96gno" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Combustion & Flame <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=vPhG4r5-Eis" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 5: Conservation Ecosystem <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=cooKqK6Sg7A"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Crop Production & Mgmt
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=V-gY6b-3U0E"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Microorganisms
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=A3X8uKkaidU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Coal and Petroleum
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Combustion & Flame
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Conservation Ecosystem
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
         </div>
@@ -426,21 +761,91 @@
           <div class="subject-card">
             <h3>Mathematics</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=zpPG1toQ_b8" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Number Systems <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=39pIn_n7zls" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Polynomials <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=E_ObeLwI9k8" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Coordinate Geometry <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=0O9XW42LidY" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Linear Equations 2V <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=H_X67_g2XmI" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 6: Lines and Angles <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=zpPG1toQ_b8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Number Systems
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=39pIn_n7zls"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Polynomials
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=E_ObeLwI9k8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Coordinate Geometry
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=0O9XW42LidY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Linear Equations 2V
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=H_X67_g2XmI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Lines and Angles
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
           <div class="subject-card">
             <h3>Science</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=ruHwWNLgBV4" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Matter in Surroundings <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=cooKqK6Sg7A" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Is Matter Around Us Pure <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=V-gY6b-3U0E" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 5: Cell - Fundamental Unit <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=A3X8uKkaidU" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 6: Tissues Framework <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=T-D9mB96gno" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 8: Motion Kinematics <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=ruHwWNLgBV4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Matter in Surroundings
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=cooKqK6Sg7A"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Is Matter Around Us Pure
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=V-gY6b-3U0E"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Cell - Fundamental Unit
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=A3X8uKkaidU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Tissues Framework
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 8: Motion Kinematics
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
         </div>
@@ -452,26 +857,131 @@
           <div class="subject-card">
             <h3>Mathematics</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=s7Y976auPwE" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Real Numbers <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=zpPG1toQ_b8" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Polynomials <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=39pIn_n7zls" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Pair of Linear Equations <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=E_ObeLwI9k8" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Quadratic Equations <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=0O9XW42LidY" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 5: Arithmetic Progressions <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=H_X67_g2XmI" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 6: Triangles Proofs <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=6KszR_C06uU" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 7: Coordinate Geometry <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=f_O0xWwO4Kk" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 8: Intro to Trigonometry <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=s7Y976auPwE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Real Numbers
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=zpPG1toQ_b8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Polynomials
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=39pIn_n7zls"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Pair of Linear Equations
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=E_ObeLwI9k8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Quadratic Equations
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=0O9XW42LidY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Arithmetic Progressions
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=H_X67_g2XmI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Triangles Proofs
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=6KszR_C06uU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 7: Coordinate Geometry
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=f_O0xWwO4Kk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 8: Intro to Trigonometry
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
           <div class="subject-card">
             <h3>Science</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=OSy70X0Cn20" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Chemical Reactions <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=ruHwWNLgBV4" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Acids, Bases & Salts <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=cooKqK6Sg7A" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Metals & Non-Metals <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=V-gY6b-3U0E" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Carbon & Compounds <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=vPhG4r5-Eis" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 6: Life Processes <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=X2pU986Kj_g" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 7: Control & Coordination <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=mAt61882WjM" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 10: Light & Optics <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=OSy70X0Cn20"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Chemical Reactions
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=ruHwWNLgBV4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Acids, Bases & Salts
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=cooKqK6Sg7A"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Metals & Non-Metals
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=V-gY6b-3U0E"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Carbon & Compounds
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Life Processes
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=X2pU986Kj_g"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 7: Control & Coordination
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=mAt61882WjM"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 10: Light & Optics
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
         </div>
@@ -484,18 +994,67 @@
           <div class="subject-card">
             <h3>Physics</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=WvI6G-Lz8w8" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Units & Measurements <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=T-D9mB96gno" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Motion Straight Line <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=A3X8uKkaidU" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Laws of Motion <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=O_hWshXhG2I" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 5: Work, Energy & Power <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=WvI6G-Lz8w8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Units & Measurements
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Motion Straight Line
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=A3X8uKkaidU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Laws of Motion
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=O_hWshXhG2I"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 5: Work, Energy & Power
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
           <div class="subject-card">
             <h3>Chemistry</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=Y-bCq8wX8w0" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Basic Concepts <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=vPhG4r5-Eis" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Structure of Atom <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=X2pU986Kj_g" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Periodic Classification <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=Y-bCq8wX8w0"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Basic Concepts
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Structure of Atom
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=X2pU986Kj_g"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Periodic Classification
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
 
@@ -503,8 +1062,22 @@
           <div class="subject-card">
             <h3>Accountancy</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=Vmh00j8XW0k" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Intro to Accounting <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=y_N5p_5O-8A" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Theory Base Framework <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=Vmh00j8XW0k"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Intro to Accounting
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=y_N5p_5O-8A"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Theory Base Framework
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
         </div>
@@ -517,17 +1090,58 @@
           <div class="subject-card">
             <h3>Physics</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=8b_XwW8x8Mk" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Current Electricity <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=WvI6G-Lz8w8" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 4: Moving Charges & Mag <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=T-D9mB96gno" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 6: Electromagnetic Induction <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=8b_XwW8x8Mk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Current Electricity
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=WvI6G-Lz8w8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 4: Moving Charges & Mag
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=T-D9mB96gno"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 6: Electromagnetic Induction
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
           <div class="subject-card">
             <h3>Chemistry</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=w_NbM8XwI78" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Solutions <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=Y-bCq8wX8w0" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 2: Electrochemistry <span class="play-lbl">Launch Lecture</span></a>
-              <a href="https://www.youtube.com/watch?v=vPhG4r5-Eis" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 3: Chemical Kinetics <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=w_NbM8XwI78"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Solutions <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=Y-bCq8wX8w0"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 2: Electrochemistry
+                <span class="play-lbl">Launch Lecture</span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=vPhG4r5-Eis"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 3: Chemical Kinetics
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
 
@@ -535,25 +1149,35 @@
           <div class="subject-card">
             <h3>Economics</h3>
             <div class="chapters-stack">
-              <a href="https://www.youtube.com/watch?v=XyN6U8x7M9A" target="_blank" rel="noopener noreferrer" class="chapter-item">Ch 1: Intro Macroeconomics <span class="play-lbl">Launch Lecture</span></a>
+              <a
+                href="https://www.youtube.com/watch?v=XyN6U8x7M9A"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="chapter-item"
+                >Ch 1: Intro Macroeconomics
+                <span class="play-lbl">Launch Lecture</span></a
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer>&copy; 2026 FutureLearn AI &mdash; Advanced Verified Performance Architecture</footer>
+    <footer>
+      &copy; 2026 FutureLearn AI &mdash; Advanced Verified Performance
+      Architecture
+    </footer>
 
     <script>
       function navigateClass(classBlockId) {
-        const contentBlocks = document.querySelectorAll('.class-content-block');
-        contentBlocks.forEach(block => block.classList.remove('active'));
+        const contentBlocks = document.querySelectorAll(".class-content-block");
+        contentBlocks.forEach((block) => block.classList.remove("active"));
 
-        const structuralTabs = document.querySelectorAll('.class-tab');
-        structuralTabs.forEach(tab => tab.classList.remove('active'));
+        const structuralTabs = document.querySelectorAll(".class-tab");
+        structuralTabs.forEach((tab) => tab.classList.remove("active"));
 
-        document.getElementById(classBlockId).classList.add('active');
-        event.currentTarget.classList.add('active');
+        document.getElementById(classBlockId).classList.add("active");
+        event.currentTarget.classList.add("active");
       }
     </script>
   </body>
